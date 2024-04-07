@@ -229,6 +229,6 @@ startup_session ~/.config/kitty/kitty-startup.session
 
 
 # BEGIN_KITTY_THEME
-# Constant Perceptual Luminosity (dark)
+# Liquid Carbon
 include current-theme.conf
 # END_KITTY_THEME
