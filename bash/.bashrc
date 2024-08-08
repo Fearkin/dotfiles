@@ -71,9 +71,9 @@ purple='\[\e[0;35m\]'
 nc='\[\e[0m\]'
 
 if [ "$UID" = 0 ]; then
-    PS1="$red\u$nc@$red\H$nc:$CYAN\w$nc\\n$red#$nc "
+    PS1="$red\u$nc@$red\H$nc:$CYAN\w$nc$red#$nc "
 else
-    PS1="$PURPLE\u$nc@$CYAN\H$nc:$GREEN\w$nc\\n$GREEN\$$nc "
+    PS1="$PURPLE\u$nc@$CYAN\H$nc:$GREEN\w$nc$GREEN\$$nc "
 fi
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -119,7 +119,7 @@ echo $PATH | grep -Eq "(^|:)/usr/sbin(:|)" || PATH=$PATH:/usr/sbin
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h:\w\a\]$PS1"
     ;;
 *)
     ;;
