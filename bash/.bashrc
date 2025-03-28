@@ -137,4 +137,5 @@ export PATH=$PATH:/usr/local/go/bin
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-source /home/fearkin/.tmc-autocomplete.sh || true
+
+export GPG_TTY=$(tty)
